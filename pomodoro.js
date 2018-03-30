@@ -10,9 +10,9 @@ var barInterval;
 
 
 window.onload = function() {
-	functionButton("functionButtonStart", 0);
-	functionButton("functionButtonStop",1);
-	functionButton("functionButtonReset", 2);
+	functionButton('functionButtonStart', 0);
+	functionButton('functionButtonStop',1);
+	functionButton('functionButtonReset', 2);
 	timeButton(25, 1499, 0);
 	timeButton(10, 599, 1);
 	timeButton(5, 299, 2);
@@ -60,7 +60,7 @@ function changeTypeOfWork(val){
 }
 		
 function timeButton(time, bar, value){
-	var but = document.getElementsByClassName("timeButton")[value];
+	var but = document.getElementsByClassName('timeButton')[value];
 	but.onclick = function(){
 		barNumb = bar;
 		changeTime(time);
@@ -69,7 +69,7 @@ function timeButton(time, bar, value){
 
 function changeTime(timeGiven){
 	stopClock();
-	clc = document.getElementsByClassName("clock")[0];
+	clc = document.getElementsByClassName('clock')[0];
 	width = 1;
 	sec = 59;
 	min = timeGiven - 1;
@@ -81,13 +81,13 @@ function changeTime(timeGiven){
 }		
 		
 function clock(){
-	var clc = document.getElementsByClassName("clock")[0];
+	var clc = document.getElementsByClassName('clock')[0];
 	if(oneNumberMin === false){
-		min = "0" + min;
+		min = '0' + min;
 		oneNumberMin = true;
 	}
 	if(sec < 10 && sec != 0){
-		sec = "0" + sec;
+		sec = '0' + sec;
 	}
 	else if(sec === 0 && min != 0){
 		sec = 59;
@@ -97,15 +97,15 @@ function clock(){
 		}
 	}
 
-    clc.innerHTML = min + " : " + sec;
-	document.title = "(" + min + ":" + sec + ") Pomodoro"; 
+    clc.innerHTML = min + ' : ' + sec;
+	document.title = '(' + min + ':' + sec + ') Pomodoro'; 
 
-    if(sec === 0 && min === "0" + 0){
-		clc.innerHTML = "00 : 00";
-		document.getElementsByClassName("progres")[0].innerHTML = "Done!";
-		document.title = "Buzzzzz!"; 
+    if(sec === 0 && min === '0' + 0){
+		clc.innerHTML = '00 : 00';
+		document.getElementsByClassName('progres')[0].innerHTML = 'Done!';
+		document.title = 'Buzzzzz!'; 
         stopClock();
-		var alarm = new Audio("stuff/sound.mp3");
+		var alarm = new Audio('stuff/sound.mp3');
 		alarm.play();
 		min = reset - 1;
 		sec = 59;
@@ -137,9 +137,9 @@ function Round(n, k){
 }
 		
 function progressBar() {
-	var bar = document.getElementsByClassName("bar")[0]; 
-	var prog = document.getElementsByClassName("progres")[0];
+	var bar = document.getElementsByClassName('bar')[0]; 
+	var prog = document.getElementsByClassName('progres')[0];
 	width += (100 / barNumb); 
 	bar.style.width = width + '%';
-	prog.innerHTML = Round(width, 0) + "%";	
+	prog.innerHTML = Round(width, 0) + '%';	
 }
