@@ -1,4 +1,4 @@
-.cont {
+.cont{
 	width: 100%;
 	height: 100%;
 	background: white;
@@ -6,7 +6,7 @@
 	padding: 0;
 }
 
-.clockBox {
+.clockBox{
 	width: 80%;
 	height: 500px;
 	background: url(stuff/pom.jpg) no-repeat center;
@@ -28,22 +28,67 @@
 	left: 35%;
 }
 
-.divBut{
+.divFunctionBut{
 	position: relative;
 	width: 60%;
-	height: 35px;
-	top: 60%;
+	height: 50px;
 	left: 20%;
+	top: 0%;
 }
 
-.functionButton{
+.divTimeBut{
+	position: relative;
+	width: 100%;
+	height: 35px;
+	left: 0;
+}
+
+.functionButtonStart{
 	position: relative;
 	font-size: 20px;
-	width: 32%;
+	width: 33.33333333%;
 	height: 30px;
 	border: 1px solid;
-	margin: 0;
-	padding: 0;
+	background-color: #00cc00;
+	transition-duration: 0.4s;
+	float: left;
+}
+
+.functionButtonStart:hover{
+	background-color: #009900;
+	transition-duration: 0.4s;
+}
+
+.functionButtonStop{
+	position: relative;
+	font-size: 20px;
+	width: 33.33333333%;
+	height: 30px;
+	border: 1px solid;
+	background-color: #ff0000;
+	transition-duration: 0.4s;
+	float: left;
+}
+
+.functionButtonStop:hover{
+	background-color: #cc0000;
+	transition-duration: 0.4s;
+}
+
+.functionButtonReset{
+	position: relative;
+	font-size: 20px;
+	width: 33.33333333%;
+	height: 30px;
+	border: 1px solid;
+	background-color: #bec0b8;
+	transition-duration: 0.4s;
+	
+}
+
+.functionButtonReset:hover{
+	background-color: #a9aba0;
+	transition-duration: 0.4s;
 }
 
 .timeButton{
@@ -53,9 +98,9 @@
 	transition-duration: 0.4s;
 	border: 1px solid;
 	border-color: #248f24;
-	width: 33%;
+	width: 33.33333333%;
 	height: 50px;
-	top: 100px;
+	float: left;
 }
 
 .timeButton:hover{
@@ -63,12 +108,12 @@
 }
 
 
-.myProgress {
+.myProgress{
 	width: 100%;
 	background-color: grey;
 }
 
-.myBar {
+.bar{
 	width: 0;
 	height: 30px;
 	background-color: teal;
